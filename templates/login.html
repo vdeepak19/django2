@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>
+            LOGIN
+        </title>
+        <style>
+            .bodycontainer{
+                background-color:rgb(214, 228, 165);
+                height:500px;
+            }
+            .menucontainer{
+                background-color: darkorange;
+                
+            }
+            .menucontainer a{
+                    text-decoration: None;
+                    color:#fff;
+                    font-size: 20px;
+                    padding-top: 2px;
+                    
+            }
+            .menucontainer ul{
+                margin-left:900px;
+                margin-top:50px;
+            }
+            .menucontainer li{
+              
+                display:inline;
+                padding-left:15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        {% if messages %}
+	{% for message in messages %}
+	 {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+	{% endfor %}
+
+{% endif %}
+        <div class="container1">
+            <div class="menucontainer">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="signup">Signup</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="bodycontainer">
+                <h1>Login</h1>
+                <form method="post" action='login1'>
+                    {% csrf_token %}
+                    <label>Usename</label><br>
+                    <input type="text" name="username" placeholder="username"><br>
+                    <label>Password</label><br>
+                    <input type="password" name="password"><br>
+                    <button type="submit" name="SUBMIT">SUBMIT</button>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

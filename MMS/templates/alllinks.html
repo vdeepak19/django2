@@ -1,0 +1,26 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html>
+
+{% block body %}
+<div>
+    <center>
+<h1>All the Links are placed here</h1>
+        <br>
+<h1>This is called Site Map</h1>
+
+
+<div class="btn-group-vertical" role="group" aria-label="Basic mixed styles example">
+    <button type="button" class="btn btn-lg btn-light"><a href="{% url 'home1' %}"> HomePage</a></button><br>
+<button type="button" class="btn btn-lg btn-secondary"><a href="{% url 'qrcode' %}"> QR Code</a></button><br>
+<button type="button" class="btn btn-lg btn-success"><a href="{% url 'time1' %}"> Time Stamp</a></button><br>
+<button type="button" class="btn btn-lg btn-danger"><a href="http://127.0.0.1:8000/log/"> login</a></button><br>
+<button type="button" class="btn btn-lg btn-warning"><a href="http://127.0.0.1:8000/tasks/"> Task App</a></button><br>
+<button type="button" class="btn btn-lg btn-info">Info</button><br>
+<button type="button" class="btn btn-lg btn-light">Light</button><br>
+
+</div>
+</center>
+</div>
+{% endblock %}
+</html>

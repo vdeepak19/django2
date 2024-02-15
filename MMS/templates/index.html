@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>
+        INDEX
+    </title>
+    <style>
+        .bodycontainer {
+            background-color: rgb(214, 228, 165);
+            height: 500px;
+        }
+        .menucontainer {
+            background-color: darkorange;
+        }
+        .menucontainer a {
+            text-decoration: None;
+            color: #fff;
+            font-size: 20px;
+            padding-top: 2px;
+        }
+        .menucontainer ul {
+            margin-left: 900px;
+            margin-top: 50px;
+        }
+        .menucontainer li {
+            display: inline;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="menucontainer">
+            <ul>
+                <li><a href="http://127.0.0.1:8000/log/">Home</a></li>
+                
+                <li><a href="about">About</a></li>
+                <li><a href="faq">FAQ</a></li>
+
+                {% if user.is_authenticated %}
+              <li><a href="logout">Logout</a></li>
+                {% else %}
+                <li><a href="login">Login</a></li>
+
+                <li><a href="signup">Signup</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="bodycontainer">
+            <h1>This is home page</h1>
+            <h3>Welcome {{user.username}}</h3>
+
+            <h1 align="right"> <a href="http://127.0.0.1:8000/"> Click Here For Main Home Page </a> </h1>
+        </div>
+    </div>
+</body>
+</html>

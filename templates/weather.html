@@ -1,0 +1,25 @@
+<!-- weather/templates/weather/weather.html -->
+
+<h1>Weather App</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="city">Enter a City:</label>
+    <input type="text" id="city" name="city" required>
+    <button type="submit">Get Weather</button>
+</form>
+
+{% if temperature %}
+    <h2>Weather in {{ reports.0.city }}:</h2>
+    <p>{{ description }}</p>
+    <p>Temperature: {{ temperature }}°C</p>
+{% endif %}
+
+<h2>Weather Reports:</h2>
+<ul>
+    {% for report in reports %}
+        <li>{{ report.city }} - {{ report.weather_description }} ({{ report.temperature }}°C)</li>
+    {% empty %}
+        <li>No weather reports available.</li>
+    {% endfor %}
+</ul>

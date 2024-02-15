@@ -1,0 +1,48 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+
+<html>
+
+{% block body %}
+<div>
+ <center>
+ <h1>This is SDP - MMS Homepage</h1>
+<img class="card-img-top"  src="{% static 'images/skill1.jpg' %}" alt="Skills" width="600" height="300">
+
+ </center>
+</div>
+
+{% csrf_token %}
+<form action = "wh/" method="post">
+    {% csrf_token %}
+<div class="col-md-4" align="center">
+    <div class="row">
+<div class="card" align="center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Weather App with Python</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <input type="text" class="form-control" name = "wh" placeholder="Enter a place">
+    <br>
+      <input type="submit" class="btn btn-primary btn-block" value="check">
+  </div>
+</div>
+        </div>
+</div>
+</form>
+
+<div class="col-md-6" align="center">
+<ul class="pagination pagination-lg">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="{% url 'alllinks' %}">ALL Links</a></li>
+</ul>
+</div>
+
+{% endblock %}
+
+</html>

@@ -1,0 +1,35 @@
+{% extends 'Navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <style>
+
+</style>
+    <script>
+        	$('button').on('click', function() {
+  $('.container-fluid').toggleClass('toggled');
+});
+    </script>
+
+</head>
+
+{% block body %}
+<div class="container-fluid">
+<div class="sidebar">
+
+<a href="link7/">Review 1</a>
+<a href="#">Review 2</a>
+<a href="#">Review 3</a>
+<a href="#">Review 4</a>
+</div>
+<div class="main">
+<h3>Example</h3>
+<section>
+    <h1>deepak</h1>
+</section>
+</div>
+</div>
+{% endblock %}
+
+</html>

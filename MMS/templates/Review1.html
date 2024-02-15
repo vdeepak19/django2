@@ -1,0 +1,80 @@
+{% extends 'Navbar.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <style>
+
+</style>
+    <script>
+        	$('button').on('click', function() {
+  $('.container-fluid').toggleClass('toggled');
+});
+    </script>
+<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity=
+"sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+        crossorigin="anonymous">
+    <script src=
+"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity=
+"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+        </script>
+    <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity=
+"sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous">
+        </script>
+</head>
+
+{% block body %}
+<div class="container-fluid">
+<div class="sidebar">
+
+<a href="link6/link7/">Review 1</a>
+<a href="#">Review 2</a>
+<a href="#">Review 3</a>
+<a href="#">Review 4</a>
+</div>
+<div class="main">
+<h3>Example</h3>
+<section>
+<div class="dropdown">
+                <button type="button"
+                    class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    Select CS Subjects
+                </button>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                    <a class="dropdown-item" href="#">
+                        Data Structure
+                    </a>
+                        </li>
+                        <li>
+                    <a class="dropdown-item" href="#">
+                        Algorithm
+                    </a>
+                        </li>
+                        <li>
+                    <a class="dropdown-item" href="#">
+                        Operating System
+                    </a>
+                        </li>
+                        <li>
+                    <a class="dropdown-item" href="#">
+                        Computer Networks
+                    </a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+</section>
+</div>
+</div>
+{% endblock %}
+
+</html>

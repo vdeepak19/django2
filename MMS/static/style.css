@@ -1,0 +1,21 @@
+#sidebar{
+position : fixed
+width : 30%
+height : 100%
+}
+#slidebar li{
+}
+#sidebar.active{
+left : 0
+}
+.toggle-btn span{
+display:block
+width: 30px;
+height: 5px;
+margin:3px;
+}
+.toggle-btn{
+position:absolute;
+left:120%;
+top:15px;
+}
